@@ -66,9 +66,52 @@ const answerOptions = Array.from(answers).sort(() => Math.random() - 0.5);
 ```
 This snippet builds a set of three unique answer choices—including the correct one—and then shuffles them before rendering. This logic helps maintain fairness and variety throughout the quiz.
 
+Through this project, I:
+- implemented condition-based logic for state transitions,
+- learned about sets for unique data handling,
+- built a responsive, no-framework interface,
+- applied progressive enhancement techniques.
+
 ![Image](https://github.com/user-attachments/assets/22f2cc25-bb02-4642-a4b1-afb41379a0b6)
 
 
 
 ## Chatbot - Exercise 5
+This interactive chatbot was created as part of an exercise to practice conversational state management and user personalization in JavaScript. The bot welcomes the user, asks for their name and birthday, and tailors its replies based on that data. It also responds intelligently to certain queries like checking the weather or time – with a humorous twist.
+
+The bot starts by greeting the user and capturing their name, either from structured input like “My name is X” or a direct name input.
+```html
+if (state === 1) {
+  const nameMatch = userMessage.match(/\b(?:my name is|i'm|i am)\s+([^.!?,]+)/i);
+  userName = nameMatch ? nameMatch[1].trim() : userMessage.trim();
+  appendMessage(`Nice to meet you, ${userName}! When is your birthday? (YYYY-MM-DD)`);
+  state = 2;
+}
+```
+
+After receiving the user's birth date in YYYY-MM-DD format, the bot calculates how many days are left until the next birthday and responds accordingly.
+```html
+const now = new Date();
+let nextBday = new Date(now.getFullYear(), mm - 1, dd);
+if (nextBday < now) nextBday.setFullYear(now.getFullYear() + 1);
+const daysLeft = Math.ceil((nextBday - now) / (1000 * 60 * 60 * 24));
+appendMessage(`There are ${daysLeft} days left until your birthday, ${userName}! 🎉`);
+```
+
+When the conversation progresses, the bot listens for keywords like "weather" or "time", and provides external resources using dynamically embedded links.
+```html
+if (msg.includes("weather")) {
+  appendMessage("Check the weather here: https://www.accuweather.com");
+} else if (msg.includes("time") || msg.includes("hour")) {
+  appendMessage("Buy yourself a watch to keep track of time. Just avoid cheap ones — they lie! Check this site: https://www.rolex.com");
+}
+```
+Skills I practiced:
+- managing conversation state with conditional logic,
+- parsing user input using regular expressions,
+- using Date objects for time-based calculations,
+- dynamically generating DOM content,
+- embedding secure clickable links in messages,
+- structuring user-friendly UI updates using scrollHeight and scroll behavior.
+  
 ![Image](https://github.com/user-attachments/assets/e3596aa8-2617-4dd0-9460-498397ef021b)
