@@ -7,3 +7,4 @@ This repository documents the process of learning the fundamentals of HTML, CSS 
 
 ![Image](https://github.com/user-attachments/assets/541cda99-f1f9-460b-9e58-66e4071b32cd)
 
+![Image](https://github.com/user-attachments/assets/22f2cc25-bb02-4642-a4b1-afb41379a0b6)
