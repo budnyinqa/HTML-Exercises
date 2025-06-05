@@ -48,7 +48,27 @@ Each function includes basic validation, and the UI automatically prevents layou
 
 
 
-## 
+## Multiplication Table Quiz - Exercise 4
+This project is a simple yet powerful quiz app designed to help users practice multiplication in a fun, interactive way. The quiz dynamically generates multiplication questions across three difficulty levels. Each level contains a series of randomized questions with multiple answer options. The user receives immediate feedback after picking the wrong answer, and their progress is tracked.
+
+To ensure the quiz offers a balanced and fair challenge, each question is generated with one correct answer and two plausible incorrect options. These are randomized to prevent memorization of positions and to keep users engaged.
+```html
+const answers = new Set([correctAnswer]);
+
+while (answers.size < 3) {
+  const wrong = correctAnswer + Math.floor(Math.random() * 11) - 5;
+  if (wrong > 0 && wrong !== correctAnswer) {
+    answers.add(wrong);
+  }
+}
+
+const answerOptions = Array.from(answers).sort(() => Math.random() - 0.5);
+```
+This snippet builds a set of three unique answer choices—including the correct one—and then shuffles them before rendering. This logic helps maintain fairness and variety throughout the quiz.
+
 ![Image](https://github.com/user-attachments/assets/22f2cc25-bb02-4642-a4b1-afb41379a0b6)
 
+
+
+## Chatbot - Exercise 5
 ![Image](https://github.com/user-attachments/assets/e3596aa8-2617-4dd0-9460-498397ef021b)
