@@ -28,10 +28,6 @@ Despite the minimalist layout, I learned a lot about:
 ## Calculator - Exercise 3
 The goal of this project was to create a functional calculator that not only looks clean and responsive, but also performs common arithmetic operations with proper error handling and accessibility. While my first exercise focused on basic variable handling and simple operations, this project brings it all together into a fully interactive and visually polished web calculator.
 
-Through this project, I developed a deeper understanding of:
-- DOM manipulation – selecting elements like the display and attaching events to buttons
-- UI/UX improvements – shortening long results to fit the screen with slice() and adding visual consistency with CSS variables
-
 The calculator logic is powered by a set of custom JavaScript functions. Here's a breakdown:
 ```html
 appendToDisplay(input);  // Adds number or symbol to the display
@@ -42,6 +38,10 @@ squareRoot();            // Calculates square root if input is valid and non-neg
 deleteLast();            // Removes last character (like backspace)
 ```
 Each function includes basic validation, and the UI automatically prevents layout overflow for long results. The calculator also gracefully handles mathematical edge cases like division by zero or square roots of negative numbers.
+
+Through this project, I developed a deeper understanding of:
+- DOM manipulation – selecting elements like the display and attaching events to buttons
+- UI/UX improvements – shortening long results to fit the screen with slice() and adding visual consistency with CSS variables
 
 ![Image](https://github.com/user-attachments/assets/541cda99-f1f9-460b-9e58-66e4071b32cd)
 
