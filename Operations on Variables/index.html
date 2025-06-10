@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operations on Variables</title>
+</head>
+<body>
+    <h1>Operations on Variables</h1>
+    
+    <label for="inputA">Enter value for a:</label>
+    <input type="number" id="inputA" step="any"><br><br>
+
+    <label for="inputB">Enter value for b:</label>
+    <input type="number" id="inputB" step="any"><br><br>
+
+    <button onclick="calculate()">Calculate</button>
+
+    <p id="results"></p>
+
+    <script>
+        function calculate() {
+            let a = parseFloat(document.getElementById("inputA").value);
+            let b = parseFloat(document.getElementById("inputB").value);
+
+            if (isNaN(a) || isNaN(b)) {
+                document.getElementById("results").innerHTML = "Please enter valid numbers for both a and b.";
+                return;
+            }
+
+            let addition = a + b;
+            let subtractionA_B = a - b;
+            let subtractionB_A = b - a;
+            let multiplication = a * b;
+            let divisionA_B = a / b;
+            let divisionB_A = b / a;
+            let modulusA_B = a % b;
+            let modulusB_A = b % a;
+            let sqrtA = Math.sqrt(a);
+            let sqrtB = Math.sqrt(b);
+
+            let results = `
+                Addition: ${addition} <br>
+                Subtraction a - b: ${subtractionA_B} <br>
+                Subtraction b - a: ${subtractionB_A} <br>
+                Multiplication: ${multiplication} <br>
+                Division a / b: ${divisionA_B.toFixed(2)} <br>
+                Division b / a: ${divisionB_A.toFixed(2)} <br>
+                Modulus a % b: ${modulusA_B} <br>
+                Modulus b % a: ${modulusB_A} <br>
+                Square root of a: ${sqrtA.toFixed(2)} <br>
+                Square root of b: ${sqrtB.toFixed(2)}
+            `;
+
+            document.getElementById("results").innerHTML = results;
+
+            console.log("Addition:", addition);
+            console.log("Subtraction a - b:", subtractionA_B);
+            console.log("Subtraction b - a:", subtractionB_A);
+            console.log("Multiplication:", multiplication);
+            console.log("Division a / b:", divisionA_B);
+            console.log("Division b / a:", divisionB_A);
+            console.log("Modulus a % b:", modulusA_B);
+            console.log("Modulus b % a:", modulusB_A);
+            console.log("Square root of a:", sqrtA);
+            console.log("Square root of b:", sqrtB);
+        }
+    </script>
+</body>
+</html>
