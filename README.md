@@ -1,5 +1,5 @@
 # HTML - Exercises
-This repository documents the process of learning the fundamentals of HTML, CSS and JavaScript during my university studies.
+This repository contains a collection of small web development projects designed to gradually build up core front-end skills. The tasks range from very basic to intermediate levels, providing hands-on experience with essential technologies such as HTML, CSS, and JavaScript.
 
 ## Operations on Variables - Exercise 1
 This project is a simple, interactive calculator-like web app that performs basic aggregate operations on values entered by the user. Its main purpose was to practice working with variables and functions in a real-world scenario.
