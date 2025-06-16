@@ -1,0 +1,60 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  .skip-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0.5rem 1rem;
+    background: #000;
+    color: #fff;
+    text-decoration: none;
+    z-index: 1000;
+    visibility: hidden;
+  }
+  .skip-link:focus {
+    visibility: visible;
+    outline: 3px solid Highlight;
+    outline-offset: 2px;
+  }  
+  html {
+    font-size: 100%;
+  }
+  @media (max-width: 600px) {
+    html { font-size: 125%; }
+  }
+  body {
+    margin: 0;
+    padding: 0 1.25rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    font-family: "Pixelify Sans", sans-serif;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+  .container {
+    width: 100%;
+    max-width: 37.5rem;
+  }
+  img {
+    display: block;
+    width: 12.5rem;
+    height: 12.5rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 1rem;
+  }
+  h1 {
+    font-size: 2.1875rem;
+    margin: 0 0 0.5rem;
+    color: #000;
+  }
+  h2 {
+    font-size: 1.25rem;
+    margin: 0;
+    color: #000;
+  }
+  
