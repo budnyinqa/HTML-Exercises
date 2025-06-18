@@ -1,0 +1,125 @@
+:root {
+  --clr-dark-a0: #000000;
+  --clr-light-a0: #ffffff;
+
+--clr-primary-a0: #ff5521;
+--clr-primary-a10: #f35d2e;
+--clr-primary-a20: #e66439;
+--clr-primary-a30: #da6a44;
+--clr-primary-a40: #cd6f4f;
+--clr-primary-a50: #bf7459;
+
+  --clr-surface-a0: #ffffff;
+  --clr-surface-a10: #f0f0f0;
+  --clr-surface-a20: #e1e1e1;
+  --clr-surface-a30: #d3d3d3;
+  --clr-surface-a40: #c5c5c5;
+  --clr-surface-a50: #b6b6b6;
+
+  --clr-surface-tonal-a0: #f9f9f9;
+  --clr-surface-tonal-a10: #eeeeee;
+  --clr-surface-tonal-a20: #e4e4e4;
+  --clr-surface-tonal-a30: #dadada;
+  --clr-surface-tonal-a40: #d0d0d0;
+  --clr-surface-tonal-a50: #c6c6c6;
+}
+
+body {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--clr-surface-a0);
+  color: var(--clr-dark-a0);
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  width: 100%;
+  max-width: 480px;
+}
+
+#calculator {
+  background-color: var(--clr-surface-tonal-a10);
+  border-radius: 15px;
+  overflow: hidden;
+  width: 100%;
+}
+
+#display {
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  width: 100%;
+  padding: 20px;
+  font-size: 3.5rem;
+  text-align: left;
+  border: none;
+  background-color: var(--clr-surface-tonal-a20);
+  color: var(--clr-dark-a0);
+  overflow-x: auto;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+#keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  padding: 25px;
+}
+
+button {
+  font-family: Arial, sans-serif;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  max-height: 100px;
+  border-radius: 50px;
+  border: none;
+  background-color: var(--clr-surface-a30);
+  color: var(--clr-dark-a0);
+  font-size: 1.9rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: var(--clr-surface-a40);
+}
+
+button:active {
+  background-color: var(--clr-surface-a50);
+}
+
+.operator-btn {
+  background-color: var(--clr-primary-a30);
+  color: var(--clr-light-a0);
+}
+
+.operator-btn:hover {
+  background-color: var(--clr-primary-a20);
+}
+
+.operator-btn:active {
+  background-color: var(--clr-primary-a10);
+}
+
+.equal-btn {
+  background-color: var(--clr-primary-a20);
+  color: var(--clr-light-a0);
+}
+
+.equal-btn:hover {
+  background-color: var(--clr-primary-a10);
+}
+
+.equal-btn:active {
+  background-color: var(--clr-primary-a0);
+}
