@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chatbot</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+</head>
+<body>
+    <button class="chatbot-toggler">
+        <span class="material-symbols-outlined">mode_comment</span>
+        <span class="material-symbols-outlined">close</span>
+    </button>
+    <div class="chatbot">
+        <header>
+            <h2>Chatbot</h2>
+            <span class="material-symbols-outlined">close</span>
+        </header>
+        <ul class="chatbox">
+            <li class="chat start1">
+                <span class="material-symbols-outlined">smart_toy</span>
+                <p>Hi! I'm the Chatbot.<br>What's your name?</p>
+            </li>
+        </ul>
+        <div class="chat_input">
+            <textarea placeholder="Ask something..."></textarea>
+            <span id="send-btn" class="material-symbols-outlined">send</span>
+        </div>
+    </div>
+    
+    <script>
+        const toggler = document.querySelector('.chatbot-toggler');
+        const closeBtn = document.querySelector('.chatbot header span');
+        toggler.addEventListener('click', () => document.body.classList.toggle('show-chatbot'));
+        closeBtn.addEventListener('click', () => document.body.classList.remove('show-chatbot'));
+    </script>
+    <script src="index.js"></script>
+
+</body>
+</html>
